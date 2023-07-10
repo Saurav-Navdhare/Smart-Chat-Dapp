@@ -9,14 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "ethers": "^6.6.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "dotenv": "^16.3.1",
+    "eject": "^0.0.4",
+    "ethers": "^5.7.2",
     "next": "13.4.9",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "reject": "^0.0.1",
+    "twilio-video": "^2.27.0",
     "web3modal": "^1.9.12"
   },
   "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
-    "hardhat": "^2.16.1"
+    "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+    "hardhat": "^2.12.0"
   }
 }
