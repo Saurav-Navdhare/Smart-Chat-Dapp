@@ -6,7 +6,7 @@ const ethers = require("ethers");
 
 //INTERNAL IMPORT
 import {
-  CheckIfWalletConnected,
+  ChechIfWalletConnected,
   connectWallet,
   connectingWithContract,
 } from "../Utils/apiFeature";
@@ -155,7 +155,7 @@ export const ChatAppProvider = ({ children }) => {
         sendMessage,
         readUser,
         connectWallet,
-        ChechIfWalletConnected: CheckIfWalletConnected,
+        ChechIfWalletConnected,
         account,
         userName,
         friendLists,
