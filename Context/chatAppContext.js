@@ -6,12 +6,12 @@ const ethers = require("ethers");
 
 //INTERNAL IMPORT
 import {
-  ChechIfWalletConnected,
+  CheckIfWalletConnected,
   connectWallet,
   connectingWithContract,
 } from "../Utils/apiFeature";
 
-export const ChatAppContect = React.createContext();
+export const ChatAppContext = React.createContext();
 
 export const ChatAppProvider = ({ children }) => {
   //USESTATE
@@ -82,7 +82,7 @@ export const ChatAppProvider = ({ children }) => {
       setLoading(false);
       window.location.reload();
     } catch (error) {
-      setError("Error while creating your account Pleas reload browser");
+      setError("Error while creating your account Please reload browser");
     }
   };
 
@@ -147,7 +147,7 @@ export const ChatAppProvider = ({ children }) => {
     setCurrentUserAddress(userAddress);
   };
   return (
-    <ChatAppContect.Provider
+    <ChatAppContext.Provider
       value={{
         readMessage,
         createAccount,
@@ -155,7 +155,7 @@ export const ChatAppProvider = ({ children }) => {
         sendMessage,
         readUser,
         connectWallet,
-        ChechIfWalletConnected,
+        ChechIfWalletConnected: CheckIfWalletConnected,
         account,
         userName,
         friendLists,
@@ -168,6 +168,6 @@ export const ChatAppProvider = ({ children }) => {
       }}
     >
       {children}
-    </ChatAppContect.Provider>
+    </ChatAppContext.Provider>
   );
 };

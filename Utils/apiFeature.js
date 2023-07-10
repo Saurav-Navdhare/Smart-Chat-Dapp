@@ -3,7 +3,7 @@ import Web3Modal from "web3modal";
 
 import { ChatAppAddress, ChatAppABI } from "../Context/constants";
 
-export const ChechIfWalletConnected = async () => {
+export const CheckIfWalletConnected = async () => {
   try {
     if (!window.ethereum) return console.log("Install MateMask");
 
@@ -54,7 +54,7 @@ export const connectingWithContract = async () => {
   }
 };
 
-export const converTime = (time) => {
+export const convertTime = (time) => {
   const newTime = new Date(time.toNumber());
 
   const realTime =

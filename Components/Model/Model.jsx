@@ -4,7 +4,7 @@ import Image from "next/image";
 //INTERNAL IMPORT
 import Style from "./Model.module.css";
 import images from "../../assets";
-import { ChatAppContect } from "../../Context/ChatAppContext";
+import { ChatAppContext } from "../../Context/ChatAppContext";
 import { Loader } from "../../Components/index";
 
 const Model = ({
@@ -21,7 +21,7 @@ const Model = ({
   const [name, setName] = useState("");
   const [userAddress, setUserAddress] = useState(address);
 
-  const { loading } = useContext(ChatAppContect);
+  const { loading } = useContext(ChatAppContext);
   return (
     <div className={Style.Model}>
       <div className={Style.Model_box}>
